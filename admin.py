@@ -48,7 +48,6 @@ class Job(db.Model):
 
 # Views
 
-
 class AdminModelView(ModelView):
     def __init__(self, **kwargs):
         ModelView.__init__(self, self.model, db.session, **kwargs)
@@ -72,6 +71,7 @@ class AdminJobView(AdminModelView):
     form_ajax_refs = {
         'order': {'fields': ['id']},
     }
+
 
 class AdminLocationView(AdminModelView):
     model = Location
