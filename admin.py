@@ -66,8 +66,9 @@ class AdminOrderView(AdminModelView):
 class AdminJobView(AdminModelView):
     model = Job
     column_display_pk = True
+    # Including this filter breaks
     column_filters = ('order_id', 'order.location.name', ) 
-    column_list = ('id', 'order_id', 'order.location.name', )
+    column_list = ('id', 'order_id', )
     form_ajax_refs = {
         'order': {'fields': ['id']},
     }
