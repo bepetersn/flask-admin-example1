@@ -1,0 +1,6 @@
+click
+flask
+flask-sqlalchemy
+flask-admin
+mysqlclient
+
